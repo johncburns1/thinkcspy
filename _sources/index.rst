@@ -89,7 +89,7 @@ Think Python - LaunchCode Edition
 
             #shift angle to the right and throw a tracer to slow the process down
             boxy.right(2)
-            wn.tracer(1,0)
+            wn.tracer(15,0)
             tList.append(boxy)
 
         #fills boxy
@@ -98,7 +98,7 @@ Think Python - LaunchCode Edition
         #create a new turtle
         nt = turtle.Turtle()
         nt.hideturtle()
-        nt.speed(1)
+        nt.speed(6)
 
         #draw some stars
         draw_star(nt, random.randrange(8, 20), (random.randrange(256), random.randrange(256), random.randrange(256)), 100, 200)
