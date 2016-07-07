@@ -25,7 +25,8 @@ first function called ``square`` simply computes the square of a given number.
 The second function called ``sum_of_squares`` makes use of square to compute
 the sum of three numbers that have been squared.
 
-.. codelens:: sumofsquares
+
+.. activecode:: sumofsquares
 
     def square(x):
         y = x * x
@@ -103,7 +104,6 @@ our square.
 Here is the entire example with the necessary set up code.
 
 .. activecode:: ch04_3
-    :nocodelens:
 
     import turtle
 
@@ -159,6 +159,3 @@ demonstrates two:
 
 
 .. index:: flow of execution
-
-
-

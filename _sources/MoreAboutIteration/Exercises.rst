@@ -58,7 +58,39 @@ Exercises
        .. activecode:: ex_7_8
 
 
-    #. (GRADED) Write a function, ``is_prime``, that takes a single integer argument and returns ``True`` when the argument is a *prime number* and ``False`` otherwise.
+    #. (GRADED) Write a function, ``is_prime``, that takes a single integer argument and returns ``True`` when
+       the argument is a prime number and ``False`` otherwise.
+
+       As a refresher, a number is prime if it is not divisible by any other number (other than itself and 1).
+
+       For example:
+
+         - 2 is prime
+         - 3 is prime
+         - 4 is not prime because is is divisible by 2
+         - 5 is prime
+         - 6 is not prime because it is divisible by 2 and 3
+         - 7 is prime
+         - 8 is not prime because it is divisible by 2 and 4
+         - 9 is not prime because it is divisible by 3
+
+
+       Also remember that you can use the modulo operator (%) to check whether one number is divisible by another.
+
+       For example, here are a bunch of modulo operations on 12:
+
+         - 12 % 2 is 0
+         - 12 % 3 is 0
+         - 12 % 4 is 0
+         - 12 % 5 is 2
+         - 12 % 6 is 0
+         - 12 % 7 is 5
+         - 12 % 8 is 4
+         - 12 % 9 is 3
+
+       Notice that 2, 3, 4, and 6, all the factors of 12, yield 0. This makes sense because modulo returns the remainder after division, and these numbers divide 12 perfectly, so there is no remainder left over.
+
+       Anyway, 12 is definitely not prime since it is divisible by a bunch of numbers: 2, 3, 4, and 6.
 
        .. activecode:: ex_7_9
 
@@ -397,125 +429,3 @@ Exercises
 
         .. activecode:: ex_7_22
            :nocodelens:
-
-    #.
-
-        .. tabbed:: q15
-
-            .. tab:: Question
-
-               Research the Sobel edge detection algorithm and implement it.
-
-               .. activecode:: ex_7_23
-                  :nocodelens:
-
-
-            .. tab:: Answer
-
-                .. activecode:: q15_answer
-                    :nocodelens:
-
-                    import image
-                    import math
-                    import sys
-
-                    # Code adapted from http://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/image-processing/edge_detection.html
-                    # Licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License.
-
-                    # this algorithm takes some time for larger images - this increases the amount of time
-                    # the program is allowed to run before it times out
-                    sys.setExecutionLimit(20000)
-
-                    img = image.Image("luther.jpg")
-                    newimg = image.EmptyImage(img.getWidth(), img.getHeight())
-                    win = image.ImageWin()
-
-                    for x in range(1, img.getWidth()-1):  # ignore the edge pixels for simplicity (1 to width-1)
-                        for y in range(1, img.getHeight()-1): # ignore edge pixels for simplicity (1 to height-1)
-
-                            # initialise Gx to 0 and Gy to 0 for every pixel
-                            Gx = 0
-                            Gy = 0
-
-                            # top left pixel
-                            p = img.getPixel(x-1, y-1)
-                            r = p.getRed()
-                            g = p.getGreen()
-                            b = p.getBlue()
-
-                            # intensity ranges from 0 to 765 (255 * 3)
-                            intensity = r + g + b
-
-                            # accumulate the value into Gx, and Gy
-                            Gx += -intensity
-                            Gy += -intensity
-
-                            # remaining left column
-                            p = img.getPixel(x-1, y)
-                            r = p.getRed()
-                            g = p.getGreen()
-                            b = p.getBlue()
-
-                            Gx += -2 * (r + g + b)
-
-                            p = img.getPixel(x-1, y+1)
-                            r = p.getRed()
-                            g = p.getGreen()
-                            b = p.getBlue()
-
-                            Gx += -(r + g + b)
-                            Gy += (r + g + b)
-
-                            # middle pixels
-                            p = img.getPixel(x, y-1)
-                            r = p.getRed()
-                            g = p.getGreen()
-                            b = p.getBlue()
-
-                            Gy += -2 * (r + g + b)
-
-                            p = img.getPixel(x, y+1)
-                            r = p.getRed()
-                            g = p.getGreen()
-                            b = p.getBlue()
-
-                            Gy += 2 * (r + g + b)
-
-                            # right column
-                            p = img.getPixel(x+1, y-1)
-                            r = p.getRed()
-                            g = p.getGreen()
-                            b = p.getBlue()
-
-                            Gx += (r + g + b)
-                            Gy += -(r + g + b)
-
-                            p = img.getPixel(x+1, y)
-                            r = p.getRed()
-                            g = p.getGreen()
-                            b = p.getBlue()
-
-                            Gx += 2 * (r + g + b)
-
-                            p = img.getPixel(x+1, y+1)
-                            r = p.getRed()
-                            g = p.getGreen()
-                            b = p.getBlue()
-
-                            Gx += (r + g + b)
-                            Gy += (r + g + b)
-
-                            # calculate the length of the gradient (Pythagorean theorem)
-                            length = math.sqrt((Gx * Gx) + (Gy * Gy))
-
-                            # normalise the length of gradient to the range 0 to 255
-                            length = length / 4328 * 255
-
-                            length = int(length)
-
-                            # draw the length in the edge image
-                            newpixel = image.Pixel(length, length, length)
-                            newimg.setPixel(x, y, newpixel)
-
-                    newimg.draw(win)
-                    win.exitonclick()

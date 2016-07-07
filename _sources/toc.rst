@@ -11,6 +11,7 @@ Table of Contents
 .. toctree::
    :maxdepth: 1
 
+   ChapterHeadings/Heading1.rst
    GeneralIntro/intro-TheWayoftheProgram.rst
    GeneralIntro/Algorithms.rst
    GeneralIntro/ThePythonProgrammingLanguage.rst
@@ -27,6 +28,7 @@ Table of Contents
 .. toctree::
    :maxdepth: 1
 
+   ChapterHeadings/Heading2.rst
    SimplePythonData/intro-VariablesExpressionsandStatements.rst
    SimplePythonData/ValuesandDataTypes.rst
    SimplePythonData/Typeconversionfunctions.rst
@@ -43,12 +45,13 @@ Table of Contents
    Studios/Chapter2.rst
 
 
-3. Debugging, and Using Python Outside this Book
+3. Debugging
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 .. toctree::
    :maxdepth: 1
 
+   ChapterHeadings/Heading3.rst
    GeneralIntro/WhatisDebugging.rst
    GeneralIntro/Syntaxerrors.rst
    GeneralIntro/RuntimeErrors.rst
@@ -58,9 +61,8 @@ Table of Contents
    Debugging/HowtoAvoidDebugging.rst
    Debugging/BeginningtipsforDebugging.rst
    Debugging/KnowyourerrorMessages.rst
-   Debugging/Summary.rst
-   PythonOutsideThisBook/PythonBeyondtheBrowser.rst
-   PythonOutsideThisBook/Exercises.rst
+   AdditionalExercises/Debugging.rst
+   Studios/Chapter3.rst
 
 
 4. Modules (and Turtles!)
@@ -69,6 +71,7 @@ Table of Contents
 .. toctree::
    :maxdepth: 1
 
+   ChapterHeadings/Heading4.rst
    PythonTurtle/intro-HelloLittleTurtles.rst
    PythonTurtle/OurFirstTurtleProgram.rst
    PythonTurtle/InstancesAHerdofTurtles.rst
@@ -94,6 +97,7 @@ Table of Contents
 .. toctree::
    :maxdepth: 1
 
+   ChapterHeadings/Heading5.rst
    Functions/functions.rst
    Functions/Functionsthatreturnvalues.rst
    Functions/Variablesandparametersarelocal.rst
@@ -106,6 +110,7 @@ Table of Contents
    Functions/ATurtleBarChart.rst
    Functions/Glossary.rst
    Functions/thinkcspyExercises.rst
+   Studios/Chapter5.rst
 
 
 6. Selection
@@ -114,6 +119,7 @@ Table of Contents
 .. toctree::
    :maxdepth: 1
 
+   ChapterHeadings/Heading6.rst
    Selection/BooleanValuesandBooleanExpressions.rst
    Selection/Logicaloperators.rst
    Selection/PrecedenceofOperators.rst
@@ -124,6 +130,7 @@ Table of Contents
    Selection/BooleanFunctions.rst
    Selection/Glossary.rst
    Selection/Exercises.rst
+   Studios/Chapter6.rst
 
 
 7. More About Iteration
@@ -132,18 +139,20 @@ Table of Contents
 .. toctree::
    :maxdepth: 1
 
+   ChapterHeadings/Heading7.rst
    MoreAboutIteration/intro-IterationRevisited.rst
    MoreAboutIteration/Theforlooprevisited.rst
    MoreAboutIteration/ThewhileStatement.rst
    MoreAboutIteration/RandomlyWalkingTurtles.rst
    MoreAboutIteration/The3n1Sequence.rst
-   MoreAboutIteration/Newton'sMethod.rst
+   MoreAboutIteration/NewtonsMethod.rst
    MoreAboutIteration/AlgorithmsRevisited.rst
    MoreAboutIteration/SimpleTables.rst
    MoreAboutIteration/2DimensionalIterationImageProcessing.rst
    MoreAboutIteration/ImageProcessingonYourOwn.rst
    MoreAboutIteration/Glossary.rst
    MoreAboutIteration/Exercises.rst
+   Studios/Chapter7.rst
 
 
 8. Strings
@@ -152,6 +161,7 @@ Table of Contents
 .. toctree::
    :maxdepth: 1
 
+   ChapterHeadings/Heading8.rst
    Strings/StringsRevisited.rst
    Strings/ACollectionDataType.rst
    Strings/OperationsonStrings.rst
@@ -170,6 +180,7 @@ Table of Contents
 .. toctree::
    :maxdepth: 1
 
+   ChapterHeadings/Heading9.rst
    Strings/TraversalandtheforLoopByItem.rst
    Strings/TraversalandtheforLoopByIndex.rst
    Strings/TraversalandthewhileLoop.rst
@@ -190,6 +201,7 @@ Table of Contents
 .. toctree::
    :maxdepth: 1
 
+   ChapterHeadings/Heading10.rst
    Lists/intro-Lists.rst
    Lists/ListValues.rst
    Lists/ListLength.rst
@@ -215,6 +227,7 @@ Table of Contents
 .. toctree::
    :maxdepth: 1
 
+   ChapterHeadings/Heading11.rst
    Lists/UsingListsasParameters.rst
    Lists/PureFunctions.rst
    Lists/WhichisBetter.rst
@@ -237,6 +250,7 @@ Table of Contents
 .. toctree::
    :maxdepth: 1
 
+   ChapterHeadings/Heading12.rst
    Dictionaries/intro-Dictionaries.rst
    Dictionaries/Dictionaryoperations.rst
    Dictionaries/Dictionarymethods.rst
@@ -252,6 +266,7 @@ Table of Contents
 .. toctree::
    :maxdepth: 1
 
+   ChapterHeadings/Heading13.rst
    ClassesBasics/Objectorientedprogramming.rst
    ClassesBasics/Achangeofperspective.rst
    ClassesBasics/ObjectsRevisited.rst
@@ -271,6 +286,7 @@ Table of Contents
 .. toctree::
    :maxdepth: 1
 
+   ChapterHeadings/Heading14.rst
    ClassesDiggingDeeper/Fractions.rst
    ClassesDiggingDeeper/ObjectsareMutable.rst
    ClassesDiggingDeeper/Sameness.rst
@@ -348,9 +364,8 @@ More about this Textbook
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-This book is one of many adapted versions of the open-source textbook called `How to Think Like A Computer Scientist: Learning with Python <http://www.openbookproject.net/thinkcs/python/english2e/>`_, which is used in many universities around the world. 
+This book is one of many adapted versions of the open-source textbook called `How to Think Like A Computer Scientist: Learning with Python <http://www.openbookproject.net/thinkcs/python/english2e/>`_, which is used in many universities around the world.
 
-Runestone is a platform for hosting *interactive* electronic textbooks. The folks at Runestone created `ThinkCsPy <http://interactivepython.org/runestone/static/thinkcspy/index.html>`_, an interactive version of the original book. 
+Runestone is a platform for hosting *interactive* electronic textbooks. The folks at Runestone created `ThinkCsPy <http://interactivepython.org/runestone/static/thinkcspy/index.html>`_, an interactive version of the original book.
 
 LaunchCode has made some small tweaks and adjustments to Runestone's *ThinkCsPy*, resulting in the book you are reading!
-
